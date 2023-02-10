@@ -56,3 +56,27 @@ function foo(id) {
 const name = "bob";
 console.log(`Hello, my name is ${name}`);
 
+
+
+// *** Switch statement
+export default (state, action) => {
+    switch (action.type) {
+        case "TOGGLE_DARK_MODE":
+            return {
+                ...state,
+                darkMode: action.darkMode,
+            }
+        case "UPDATE_PLAYBACK": {
+            return {
+                ...state,
+                currentSound: action.currentSound
+            }
+        }
+    
+        default:
+            return state;
+    }
+}
+
+// * The example above checks the value of action.type and executes the code of a case statement. If it evaluates to a string, TOGGLE_DARK_MODE, then the code of the first case statement is executed.
+
