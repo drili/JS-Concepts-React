@@ -49,3 +49,10 @@ function foo(id) {
         }
     }
 }
+
+
+
+// *** Template literals
+const name = "bob";
+console.log(`Hello, my name is ${name}`);
+
