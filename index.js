@@ -80,3 +80,32 @@ export default (state, action) => {
 
 // * The example above checks the value of action.type and executes the code of a case statement. If it evaluates to a string, TOGGLE_DARK_MODE, then the code of the first case statement is executed.
 
+
+
+// *** Object destructuring
+const creatures = {
+    human: ["👨🏿‍💼", "👩🏼‍💼", "🧑🏻‍💼", "👩🏾‍💻", "🧑‍💻"],
+    supernatural: ["👾", "🤖", "👽", "👹", "👺"]
+}
+
+const { human, supernatural } = creatures
+console.log(human);
+console.log(supernatural);
+
+// * Object destructuring offers you syntactical sugar to save extra lines of code:
+// * You can do this:
+const { human, supernatural } = creatures;
+
+// * Instead of this:
+const human = creatures.human;
+const supernatural = creatures.supernatural;
+
+// * In the context of React, object destructuring is frequently used with function parameters.
+const infos = { name: "Bob", "hobby": "React" };
+function printInfos({ name, hobby }) {
+    console.log(name, hobby);
+}
+
+printInfos(infos);
+const printName = ({ name }) => console.log(name)
+printName(infos)
